@@ -1,10 +1,10 @@
 all: feigen
 
-feigen: f.c
-	g++ f.c -o feigen
+feigen: feigen.c
+	g++ feigen.c -o feigen
 
 clean:
 	rm feigen output.txt
 
 debug:
-	g++ -g f.c -o feigen
+	g++ -g feigen.c -o feigen
