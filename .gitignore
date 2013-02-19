@@ -13,3 +13,7 @@
 
 # Mac Directory File
 .DS_Store
+
+# Output/Results
+feigen
+output.txt
