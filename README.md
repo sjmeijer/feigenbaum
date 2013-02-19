@@ -8,7 +8,7 @@ The code makes use of the GNU Multiple Precision Library (http://gmplib.org/). T
 
 
 ----------
-Basic Techniques
+BASIC TECHNIQUES:
 
 Forthcoming...
 
@@ -16,7 +16,7 @@ Forthcoming...
 
 
 ----------
-Compiling:
+COMPILING:
 
 The "make" or "make all" commands should compile everything. 
 
@@ -24,7 +24,7 @@ The "make" or "make all" commands should compile everything.
 
 
 ----------
-Known Issues:
+KNOWN ISSUES:
 
 The code is highly recursive, and each iteration takes exponentially longer to complete than the previous. As a result, the stack fills up after about 17 iterations, corresponding to about 8 MB of stack memory. The b-prime function should be rewritten to reduce the level of recursion required.
 
