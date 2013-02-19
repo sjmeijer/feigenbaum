@@ -1,15 +1,10 @@
-feigenbaum
-==========
-----------
-
+# feigenbaum
 Arbitrary precision calculations of the Feigenbaum constant.
 
 The code makes use of the GNU Multiple Precision Library (http://gmplib.org/). The code was written on Mac OSX 10.6.8 and hasn't been tested on other platforms. Principally, it should work on any Mac OSX operating system, and any Linux based operating system.
 
 
-----------
-----------
-BASIC TECHNIQUES:
+## Basic Techniques:
 
 The essential technique maps the techniques of Briggs. 
 
@@ -17,31 +12,22 @@ A bifurcation point is estimated using the last found value of the feigenbaum co
 
 There are several arrays used here:
 
-aa  (2-D)
+* aa  (2-D)
+* b
+* bprime
+* delta (1-D)
 
-b
-
-bprime
-
-delta (1-D)
-
-The aa array consists of the successive newton estimations of the bifurcation point. The value of aa[i][0] is the a0, the initial estimation for the next step. The aa[i][M] is the best estimate of the value of the bifurcation point.
+The aa array consists of the successive newton estimations of the bifurcation point. The value of `aa[i][0]` is the `a0`, the initial estimation for the next step. The `aa[i][M]` is the best estimate of the value of the bifurcation point (after M-1 Newton method iterations).
 
 The delta array is a vector of the successive values of the feigenbaum constant, increased after each full iteration.
 
 
-----------
-----------
-COMPILING:
+## Compiling:
 
-The "make" or "make all" commands should compile everything. 
+The `make` or `make all` commands should compile everything. 
 
 
-
-
-----------
-----------
-KNOWN ISSUES:
+## Known Issues:
 
 The code is highly recursive, and each iteration takes exponentially longer to complete than the previous. As a result, the stack fills up after about 17 iterations, corresponding to about 8 MB of stack memory. The b-prime function should be rewritten to reduce the level of recursion required.
 
